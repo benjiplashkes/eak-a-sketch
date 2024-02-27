@@ -14,9 +14,9 @@ function handleDraw(e){
     e.currentTarget.classList.toggle('full')
     
     function rndColor(){
-        const r = Math.random() * 255
-        const g = Math.random() * 255
-        const b = Math.random() * 255
+        const r = Math.floor(Math.random() * 255)
+        const g = Math.floor(Math.random() * 255)
+        const b = Math.floor(Math.random() * 255)
         const color = `rgba(${r},${g},${b})`
    
         console.log({color})

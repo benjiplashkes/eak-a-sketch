@@ -13,6 +13,5 @@
 
 .full{
     --bg-color: rgb(128, 128, 128);
-    --lightness: 0.5
-    background-color: var(--bg-color) / var(var(--lightness));
+    background-color: var(--bg-color);
 }
