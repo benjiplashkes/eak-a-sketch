@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector('#container')
 const button = document.querySelector('button#newGrid')
+const clearButton = document.querySelector("button#clear")
 
 function handleClick(){
     let gridSize = +prompt("Enter Grid Size - (Max 100)", 0)
@@ -49,9 +50,15 @@ function createGrid(gridSize){
     console.log(grid)
     return grid
 }
+function clearCurrentGrid(){
+    squares = document.querySelectorAll('.square')
+    squares.forEach(square => square.classList.remove('full'))
+}
 //draw default grid
 let newGrid = createGrid(16)
 gridContainer.appendChild(newGrid)
 
 //new grid button
 button.addEventListener("click", handleClick)
+//clear grid button
+clearButton.addEventListener("click", clearCurrentGrid)
