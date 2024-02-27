@@ -17,7 +17,7 @@ function handleDraw(e){
         const r = Math.random() * 255
         const g = Math.random() * 255
         const b = Math.random() * 255
-        const color = `rgba(${r},${g},${b}, ${getLightNess()})`
+        const color = `rgba(${r},${g},${b})`
    
         console.log({color})
         return color       
