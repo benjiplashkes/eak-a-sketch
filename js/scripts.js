@@ -12,7 +12,8 @@ function handleClick(){
     gridContainer.appendChild(grid)
 }
 function handleDraw(e){
-    e.currentTarget.classList.toggle('full')
+    let element = e.currentTarget
+    element.classList.toggle('full')
     
     function rndColor(){
         const r = Math.floor(Math.random() * 255)
@@ -23,7 +24,6 @@ function handleDraw(e){
         console.log({color})
         return color       
     }
-    let element = e.currentTarget
     element.style.setProperty('--bg-color', rndColor())
 }
 function createGrid(gridSize){
