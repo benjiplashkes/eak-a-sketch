@@ -12,7 +12,18 @@ function handleClick(){
 }
 function handleDraw(e){
     e.currentTarget.classList.toggle('full')
+    
+    function rndColor(){
+        const r = Math.random() * 255
+        const g = Math.random() * 255
+        const b = Math.random() * 255
+        const color = `rgba(${r},${g},${b}, ${getLightNess()})`
    
+        console.log({color})
+        return color       
+    }
+    let element = e.currentTarget
+    element.style.setProperty('--bg-color', rndColor())
 }
 function createGrid(gridSize){
     
